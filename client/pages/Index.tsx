@@ -122,7 +122,7 @@ const Index = () => {
                 wash easier—your choice.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col gap-4 justify-center lg:justify-start">
                 <Button
                   size="lg"
                   asChild
