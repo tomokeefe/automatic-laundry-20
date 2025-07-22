@@ -45,10 +45,19 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // For static deployment, you can integrate with:
+    // - Formspree: https://formspree.io/
+    // - Netlify Forms: https://www.netlify.com/products/forms/
+    // - Vercel Forms: https://vercel.com/docs/functions/serverless-functions/runtimes/node-js#contact-forms
+    // - EmailJS: https://www.emailjs.com/
+
     console.log("Contact form submitted:", formData);
-    // Here you would integrate with your contact management system
+
+    // Temporary alert - replace with actual form service integration
     alert(
-      "Thank you for your message! We'll respond within 24 hours during business days.",
+      "Thank you for your message! We'll respond within 24 hours during business days.\n\n" +
+      "Note: For production, integrate with a form service like Formspree, EmailJS, or Vercel Forms."
     );
 
     // Reset form
