@@ -156,7 +156,7 @@ const Contact = () => {
 
       {/* Main Contact Form */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2">
