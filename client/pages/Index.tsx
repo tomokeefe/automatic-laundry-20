@@ -373,7 +373,11 @@ const Index = () => {
               className="border-white text-white hover:bg-white hover:text-laundry-navy"
               asChild
             >
-              <Link to="/contact">Get Free Consultation</Link>
+              <Link to="/contact">
+                <span style={{ color: "rgb(4, 4, 4)" }}>
+                  Get Free Consultation
+                </span>
+              </Link>
             </Button>
           </div>
         </div>
