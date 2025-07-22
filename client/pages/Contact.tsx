@@ -399,59 +399,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Quick Contact CTA */}
-      <section className="py-16 bg-laundry-navy text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Need Immediate Assistance?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            For urgent matters or emergency service needs, call us directly
-          </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-laundry-blue hover:bg-laundry-blue-dark"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call (617) 555-1234
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-laundry-navy"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Emergency Email
-            </Button>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div>
-              <Star className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-              <h3 className="font-semibold mb-1">24-Hour Response</h3>
-              <p className="text-sm text-gray-300">
-                We respond to all inquiries within one business day
-              </p>
-            </div>
-            <div>
-              <Users className="w-8 h-8 mx-auto mb-2 text-blue-400" />
-              <h3 className="font-semibold mb-1">Local Team</h3>
-              <p className="text-sm text-gray-300">
-                Newton-based team serving the entire Northeast
-              </p>
-            </div>
-            <div>
-              <Building className="w-8 h-8 mx-auto mb-2 text-green-400" />
-              <h3 className="font-semibold mb-1">60+ Years</h3>
-              <p className="text-sm text-gray-300">
-                Family-owned business with deep industry expertise
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
