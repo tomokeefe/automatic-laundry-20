@@ -103,7 +103,7 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Services</h3>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-2 text-gray-200">
               <li>Equipment Leasing</li>
               <li>App-Based Management</li>
               <li>Remote Monitoring</li>
