@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Laundry-specific brand colors
+        "laundry-blue": {
+          DEFAULT: "hsl(var(--laundry-blue))",
+          dark: "hsl(var(--laundry-blue-dark))",
+          light: "hsl(var(--laundry-blue-light))",
+        },
+        "laundry-orange": {
+          DEFAULT: "hsl(var(--laundry-orange))",
+          light: "hsl(var(--laundry-orange-light))",
+        },
+        "laundry-navy": "hsl(var(--laundry-navy))",
+        "fresh-white": "hsl(var(--fresh-white))",
+        "clean-gray": "hsl(var(--clean-gray))",
       },
       borderRadius: {
         lg: "var(--radius)",
