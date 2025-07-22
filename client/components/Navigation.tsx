@@ -81,12 +81,12 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-clean-gray">
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-white border-t border-clean-gray shadow-lg">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors min-h-[48px] flex items-center ${
                     isActive(item.href)
                       ? "text-laundry-blue bg-laundry-blue-light"
                       : "text-gray-600 hover:text-laundry-blue hover:bg-gray-50"
@@ -96,13 +96,13 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2 space-y-2">
-                <Button variant="outline" className="w-full" asChild>
+              <div className="pt-4 space-y-3 border-t border-gray-200 mt-4">
+                <Button variant="outline" className="w-full h-12 text-base" asChild>
                   <Link to="/residents" onClick={() => setIsOpen(false)}>
                     Get the App
                   </Link>
                 </Button>
-                <Button className="w-full" asChild>
+                <Button className="w-full h-12 text-base" asChild>
                   <Link to="/owners" onClick={() => setIsOpen(false)}>
                     For Owners
                   </Link>
