@@ -58,9 +58,6 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-laundry-navy mb-6">
                 Our Story
-                <span className="block text-lg font-normal text-gray-600 mt-2">
-                  (With a Hint of Humor)
-                </span>
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
