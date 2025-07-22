@@ -95,9 +95,13 @@ const PropertyOwners = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    // You can add actual form submission logic here
+    console.log("Consultation request submitted:", formData);
+
+    // For static deployment, integrate with external form service
+    alert("Thank you for your consultation request! We'll contact you within 24 hours to schedule your free audit.");
+
+    // Reset form (optional)
+    // setFormData({ name: '', email: '', phone: '', company: '', propertyType: '', message: '' });
   };
 
   return (
