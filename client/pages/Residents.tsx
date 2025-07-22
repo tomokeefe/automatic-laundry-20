@@ -105,9 +105,10 @@ const Residents = () => {
   const handleCardOrderSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Card order submitted:", cardOrderData);
-    // Here you would integrate with payment processor and card ordering system
+
+    // For static deployment, integrate with payment processor like Stripe, PayPal, or Square
     alert(
-      "Card order submitted! You will receive a confirmation email shortly.",
+      "Card order submitted! You will receive a confirmation email shortly.\n\nNote: For production, integrate with a payment processor.",
     );
   };
 
