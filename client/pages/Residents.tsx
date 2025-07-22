@@ -4,13 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { 
-  Smartphone, 
-  Leaf, 
-  Zap, 
-  Heart, 
-  Download, 
-  Apple, 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Smartphone,
+  Leaf,
+  Zap,
+  Heart,
+  Download,
+  Apple,
   Play,
   Quote,
   Users,
@@ -19,7 +20,14 @@ import {
   MessageCircle,
   Clock,
   CheckCircle,
-  Sparkles
+  Sparkles,
+  CreditCard,
+  DollarSign,
+  MapPin,
+  Plus,
+  Wallet,
+  Shield,
+  RefreshCw
 } from 'lucide-react';
 
 const Residents = () => {
