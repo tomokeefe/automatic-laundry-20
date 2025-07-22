@@ -130,15 +130,15 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {contactMethods.map((method, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className="text-center p-8 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <div className="mb-4 flex justify-center">
                     {method.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-laundry-navy mb-2">
+                  <h3 className="text-lg font-semibold text-laundry-navy mb-3">
                     {method.title}
                   </h3>
-                  <p className="font-medium text-gray-900 mb-1">
+                  <p className="font-medium text-gray-900 mb-2 break-words">
                     {method.primary}
                   </p>
                   <p className="text-sm text-gray-500 mb-2">
