@@ -135,62 +135,401 @@ const Residents = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
+      {/* Payment Options Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-laundry-navy mb-4">
-              Download Our App, Link Your Card, and Bam!
+              Two Ways to Pay - Choose What Works for You
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Pay with a tap, no drama. Our Resident Advantage® coinless system means your building's 
-              laundry is modern, reliable, so you can reclaim that time for, you know, actual fun.
+              Whether you prefer our mobile app or a physical card, we've got you covered.
+              Both work at any Automatic Laundry location!
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center p-6">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-laundry-orange-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Download className="w-8 h-8 text-laundry-orange" />
-                </div>
-                <h3 className="text-xl font-semibold text-laundry-navy mb-2">
-                  1. Download App
+
+          <Tabs defaultValue="app" className="max-w-4xl mx-auto">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="app" className="flex items-center space-x-2">
+                <Smartphone className="w-4 h-4" />
+                <span>Mobile App</span>
+              </TabsTrigger>
+              <TabsTrigger value="card" className="flex items-center space-x-2">
+                <CreditCard className="w-4 h-4" />
+                <span>Physical Card</span>
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="app" className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <Card className="text-center p-6">
+                  <CardContent className="pt-6">
+                    <div className="w-16 h-16 bg-laundry-orange-light rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Download className="w-8 h-8 text-laundry-orange" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-laundry-navy mb-2">
+                      1. Download App
+                    </h3>
+                    <p className="text-gray-600">
+                      Get the Automatic Laundry app on iOS or Android
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="text-center p-6">
+                  <CardContent className="pt-6">
+                    <div className="w-16 h-16 bg-laundry-blue-light rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Smartphone className="w-8 h-8 text-laundry-blue" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-laundry-navy mb-2">
+                      2. Add Payment
+                    </h3>
+                    <p className="text-gray-600">
+                      Link your credit card or bank account securely
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="text-center p-6">
+                  <CardContent className="pt-6">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Zap className="w-8 h-8 text-green-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-laundry-navy mb-2">
+                      3. Tap & Go!
+                    </h3>
+                    <p className="text-gray-600">
+                      Start cycles, get alerts, and never hunt for quarters again
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="card" className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <Card className="text-center p-6">
+                  <CardContent className="pt-6">
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CreditCard className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-laundry-navy mb-2">
+                      1. Order Your Card
+                    </h3>
+                    <p className="text-gray-600">
+                      Get a physical laundry card delivered to your address
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="text-center p-6">
+                  <CardContent className="pt-6">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <DollarSign className="w-8 h-8 text-green-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-laundry-navy mb-2">
+                      2. Add Money
+                    </h3>
+                    <p className="text-gray-600">
+                      Load money online or at any location kiosk
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="text-center p-6">
+                  <CardContent className="pt-6">
+                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <MapPin className="w-8 h-8 text-purple-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-laundry-navy mb-2">
+                      3. Use Anywhere
+                    </h3>
+                    <p className="text-gray-600">
+                      Works at any Automatic Laundry location across the Northeast
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="bg-blue-50 rounded-xl p-6 text-center">
+                <Shield className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-laundry-navy mb-2">
+                  Universal Card Benefits
                 </h3>
-                <p className="text-gray-600">
-                  Get the Automatic Laundry app on iOS or Android
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="text-center p-6">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-laundry-blue-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Smartphone className="w-8 h-8 text-laundry-blue" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
+                  <div>✓ Works at 500+ locations</div>
+                  <div>✓ No expiration date</div>
+                  <div>✓ Instant balance updates</div>
                 </div>
-                <h3 className="text-xl font-semibold text-laundry-navy mb-2">
-                  2. Link Your Card
-                </h3>
-                <p className="text-gray-600">
-                  Add your payment method securely to the app
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="text-center p-6">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-laundry-navy mb-2">
-                  3. Tap & Go!
-                </h3>
-                <p className="text-gray-600">
-                  Start cycles, get alerts, and never hunt for quarters again
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </section>
+
+      {/* Card Management Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-laundry-navy mb-4">
+              Laundry Card Management
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Order a new card or add money to your existing card. Use it at any Automatic Laundry location!
+            </p>
           </div>
+
+          <Tabs defaultValue="order" className="max-w-4xl mx-auto">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="order" className="flex items-center space-x-2">
+                <Plus className="w-4 h-4" />
+                <span>Order New Card</span>
+              </TabsTrigger>
+              <TabsTrigger value="reload" className="flex items-center space-x-2">
+                <RefreshCw className="w-4 h-4" />
+                <span>Add Money to Card</span>
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="order">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <CreditCard className="w-5 h-5 text-laundry-blue" />
+                    <span>Order Your Laundry Card</span>
+                  </CardTitle>
+                  <p className="text-gray-600">
+                    Get a physical card delivered to your address. Free shipping on orders over $20!
+                  </p>
+                </CardHeader>
+                <CardContent>
+                  <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); console.log('Card ordered:', cardOrderData); }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="fullName">Full Name *</Label>
+                        <Input
+                          id="fullName"
+                          name="fullName"
+                          value={cardOrderData.fullName}
+                          onChange={(e) => setCardOrderData({...cardOrderData, fullName: e.target.value})}
+                          required
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="email">Email *</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={cardOrderData.email}
+                          onChange={(e) => setCardOrderData({...cardOrderData, email: e.target.value})}
+                          required
+                          className="mt-1"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="phone">Phone Number</Label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          value={cardOrderData.phone}
+                          onChange={(e) => setCardOrderData({...cardOrderData, phone: e.target.value})}
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="initialAmount">Initial Card Balance *</Label>
+                        <select
+                          className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-laundry-blue"
+                          value={cardOrderData.initialAmount}
+                          onChange={(e) => setCardOrderData({...cardOrderData, initialAmount: e.target.value})}
+                        >
+                          <option value="10">$10.00</option>
+                          <option value="20">$20.00 (Free Shipping!)</option>
+                          <option value="30">$30.00</option>
+                          <option value="50">$50.00</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <Label htmlFor="address">Street Address *</Label>
+                      <Input
+                        id="address"
+                        name="address"
+                        value={cardOrderData.address}
+                        onChange={(e) => setCardOrderData({...cardOrderData, address: e.target.value})}
+                        required
+                        className="mt-1"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div>
+                        <Label htmlFor="city">City *</Label>
+                        <Input
+                          id="city"
+                          name="city"
+                          value={cardOrderData.city}
+                          onChange={(e) => setCardOrderData({...cardOrderData, city: e.target.value})}
+                          required
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="state">State *</Label>
+                        <Input
+                          id="state"
+                          name="state"
+                          value={cardOrderData.state}
+                          onChange={(e) => setCardOrderData({...cardOrderData, state: e.target.value})}
+                          required
+                          className="mt-1"
+                          placeholder="MA"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="zipCode">ZIP Code *</Label>
+                        <Input
+                          id="zipCode"
+                          name="zipCode"
+                          value={cardOrderData.zipCode}
+                          onChange={(e) => setCardOrderData({...cardOrderData, zipCode: e.target.value})}
+                          required
+                          className="mt-1"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <h4 className="font-semibold text-laundry-navy mb-2">Order Summary</h4>
+                      <div className="flex justify-between items-center text-sm">
+                        <span>Card + Initial Balance (${cardOrderData.initialAmount})</span>
+                        <span>${cardOrderData.initialAmount}</span>
+                      </div>
+                      <div className="flex justify-between items-center text-sm">
+                        <span>Shipping</span>
+                        <span className={parseInt(cardOrderData.initialAmount) >= 20 ? "text-green-600" : ""}>
+                          {parseInt(cardOrderData.initialAmount) >= 20 ? "FREE" : "$3.99"}
+                        </span>
+                      </div>
+                      <hr className="my-2" />
+                      <div className="flex justify-between items-center font-semibold">
+                        <span>Total</span>
+                        <span>${parseInt(cardOrderData.initialAmount) >= 20 ? cardOrderData.initialAmount : (parseFloat(cardOrderData.initialAmount) + 3.99).toFixed(2)}</span>
+                      </div>
+                    </div>
+
+                    <Button type="submit" className="w-full bg-laundry-blue hover:bg-laundry-blue-dark">
+                      <CreditCard className="w-5 h-5 mr-2" />
+                      Order Card & Pay
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            <TabsContent value="reload">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <Wallet className="w-5 h-5 text-laundry-orange" />
+                    <span>Add Money to Your Card</span>
+                  </CardTitle>
+                  <p className="text-gray-600">
+                    Reload your existing laundry card online. Funds are available immediately!
+                  </p>
+                </CardHeader>
+                <CardContent>
+                  <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); console.log('Card reloaded:', cardReloadData); }}>
+                    <div>
+                      <Label htmlFor="cardNumber">Card Number *</Label>
+                      <Input
+                        id="cardNumber"
+                        name="cardNumber"
+                        value={cardReloadData.cardNumber}
+                        onChange={(e) => setCardReloadData({...cardReloadData, cardNumber: e.target.value})}
+                        placeholder="Enter your 16-digit card number"
+                        required
+                        className="mt-1"
+                      />
+                      <p className="text-sm text-gray-500 mt-1">
+                        Find this number on the front of your laundry card
+                      </p>
+                    </div>
+
+                    <div>
+                      <Label htmlFor="reloadAmount">Amount to Add *</Label>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-2">
+                        {['5', '10', '20', '50'].map((amount) => (
+                          <Button
+                            key={amount}
+                            type="button"
+                            variant={cardReloadData.reloadAmount === amount ? "default" : "outline"}
+                            className="h-12"
+                            onClick={() => setCardReloadData({...cardReloadData, reloadAmount: amount})}
+                          >
+                            ${amount}
+                          </Button>
+                        ))}
+                      </div>
+                      <div className="mt-3">
+                        <Input
+                          type="number"
+                          min="5"
+                          max="100"
+                          step="5"
+                          value={cardReloadData.reloadAmount}
+                          onChange={(e) => setCardReloadData({...cardReloadData, reloadAmount: e.target.value})}
+                          placeholder="Custom amount"
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="bg-orange-50 rounded-lg p-4">
+                      <h4 className="font-semibold text-laundry-navy mb-2">Reload Summary</h4>
+                      <div className="flex justify-between items-center text-sm">
+                        <span>Amount to Add</span>
+                        <span>${cardReloadData.reloadAmount}</span>
+                      </div>
+                      <div className="flex justify-between items-center text-sm">
+                        <span>Processing Fee</span>
+                        <span>$0.00</span>
+                      </div>
+                      <hr className="my-2" />
+                      <div className="flex justify-between items-center font-semibold">
+                        <span>Total Charge</span>
+                        <span>${cardReloadData.reloadAmount}</span>
+                      </div>
+                    </div>
+
+                    <Button type="submit" className="w-full bg-laundry-orange hover:bg-laundry-orange text-white">
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Add ${cardReloadData.reloadAmount} to Card
+                    </Button>
+                  </form>
+
+                  <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                    <h4 className="font-semibold text-laundry-navy mb-2 flex items-center">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      Other Ways to Add Money
+                    </h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Visit any location with cash/card reload kiosks</li>
+                      <li>• Ask your property manager about bulk reloads</li>
+                      <li>• Set up auto-reload when balance gets low</li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
