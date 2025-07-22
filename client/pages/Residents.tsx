@@ -115,9 +115,10 @@ const Residents = () => {
   const handleCardReloadSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Card reload submitted:", cardReloadData);
-    // Here you would process the card reload
+
+    // For static deployment, integrate with payment processor
     alert(
-      `$${cardReloadData.reloadAmount} has been added to your card! Funds are available immediately.`,
+      `$${cardReloadData.reloadAmount} has been added to your card! Funds are available immediately.\n\nNote: For production, integrate with a payment processor.`,
     );
   };
 
