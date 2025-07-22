@@ -52,7 +52,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   Home
                 </Link>
