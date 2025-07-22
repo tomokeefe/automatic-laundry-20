@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
   MessageCircle,
   Send,
   Building,
@@ -17,44 +17,50 @@ import {
   Star,
   Twitter,
   Instagram,
-  ExternalLink
-} from 'lucide-react';
+  ExternalLink,
+} from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    audienceType: 'property-owner',
-    subject: '',
-    message: '',
-    urgency: 'normal'
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    audienceType: "property-owner",
+    subject: "",
+    message: "",
+    urgency: "normal",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Contact form submitted:', formData);
+    console.log("Contact form submitted:", formData);
     // Here you would integrate with your contact management system
-    alert('Thank you for your message! We\'ll respond within 24 hours during business days.');
-    
+    alert(
+      "Thank you for your message! We'll respond within 24 hours during business days.",
+    );
+
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      audienceType: 'property-owner',
-      subject: '',
-      message: '',
-      urgency: 'normal'
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      audienceType: "property-owner",
+      subject: "",
+      message: "",
+      urgency: "normal",
     });
   };
 
@@ -64,36 +70,36 @@ const Contact = () => {
       title: "Phone",
       primary: "(617) 555-1234",
       secondary: "Mon-Fri 8AM-6PM EST",
-      description: "Call for immediate assistance"
+      description: "Call for immediate assistance",
     },
     {
       icon: <Mail className="w-6 h-6 text-laundry-blue" />,
-      title: "Email", 
+      title: "Email",
       primary: "info@automaticlaundry.com",
       secondary: "24-hour response time",
-      description: "General inquiries and support"
+      description: "General inquiries and support",
     },
     {
       icon: <Building className="w-6 h-6 text-laundry-blue" />,
       title: "Sales",
-      primary: "sales@automaticlaundry.com", 
+      primary: "sales@automaticlaundry.com",
       secondary: "Property owner inquiries",
-      description: "New installations and partnerships"
+      description: "New installations and partnerships",
     },
     {
       icon: <Users className="w-6 h-6 text-laundry-blue" />,
       title: "Support",
       primary: "support@automaticlaundry.com",
       secondary: "Resident assistance",
-      description: "App help and account issues"
-    }
+      description: "App help and account issues",
+    },
   ];
 
   const officeHours = [
     { day: "Monday - Friday", hours: "8:00 AM - 6:00 PM EST" },
     { day: "Saturday", hours: "9:00 AM - 2:00 PM EST" },
     { day: "Sunday", hours: "Closed" },
-    { day: "Emergency Service", hours: "24/7 for critical issues" }
+    { day: "Emergency Service", hours: "24/7 for critical issues" },
   ];
 
   return (
@@ -109,9 +115,10 @@ const Contact = () => {
             <span className="block text-laundry-blue">(And Washers)</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Got questions, ideas, or a partnership in mind? Reach out – we're based in Newton, MA, 
-            and ready to serve the Northeast. Whether it's owners seeking savings or residents sharing laughs, 
-            we're here to elevate your laundry game.
+            Got questions, ideas, or a partnership in mind? Reach out – we're
+            based in Newton, MA, and ready to serve the Northeast. Whether it's
+            owners seeking savings or residents sharing laughs, we're here to
+            elevate your laundry game.
           </p>
         </div>
       </section>
@@ -130,11 +137,12 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {contactMethods.map((method, index) => (
-              <Card key={index} className="text-center p-8 hover:shadow-lg transition-shadow">
+              <Card
+                key={index}
+                className="text-center p-8 hover:shadow-lg transition-shadow"
+              >
                 <CardContent className="pt-6">
-                  <div className="mb-4 flex justify-center">
-                    {method.icon}
-                  </div>
+                  <div className="mb-4 flex justify-center">{method.icon}</div>
                   <h3 className="text-lg font-semibold text-laundry-navy mb-3">
                     {method.title}
                   </h3>
@@ -144,9 +152,7 @@ const Contact = () => {
                   <p className="text-sm text-gray-500 mb-2">
                     {method.secondary}
                   </p>
-                  <p className="text-xs text-gray-600">
-                    {method.description}
-                  </p>
+                  <p className="text-xs text-gray-600">{method.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -167,7 +173,8 @@ const Contact = () => {
                     <span>Send Us a Message</span>
                   </CardTitle>
                   <p className="text-gray-600">
-                    Tell us your story, and we'll respond within 24 hours during business days.
+                    Tell us your story, and we'll respond within 24 hours during
+                    business days.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -197,7 +204,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="phone">Phone Number</Label>
@@ -221,7 +228,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="audienceType">I am a... *</Label>
@@ -233,7 +240,9 @@ const Contact = () => {
                           className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-laundry-blue"
                           required
                         >
-                          <option value="property-owner">Property Owner/Manager</option>
+                          <option value="property-owner">
+                            Property Owner/Manager
+                          </option>
                           <option value="resident">Resident/Tenant</option>
                           <option value="partner">Potential Partner</option>
                           <option value="vendor">Vendor/Supplier</option>
@@ -258,7 +267,7 @@ const Contact = () => {
                         </select>
                       </div>
                     </div>
-                    
+
                     <div>
                       <Label htmlFor="subject">Subject *</Label>
                       <Input
@@ -271,7 +280,7 @@ const Contact = () => {
                         className="mt-1"
                       />
                     </div>
-                    
+
                     <div>
                       <Label htmlFor="message">Message *</Label>
                       <Textarea
@@ -285,8 +294,12 @@ const Contact = () => {
                         className="mt-1"
                       />
                     </div>
-                    
-                    <Button type="submit" size="lg" className="w-full bg-laundry-blue hover:bg-laundry-blue-dark">
+
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full bg-laundry-blue hover:bg-laundry-blue-dark"
+                    >
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
                     </Button>
@@ -294,7 +307,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
             </div>
-            
+
             {/* Company Info Sidebar */}
             <div className="space-y-6">
               {/* Office Hours */}
@@ -308,7 +321,10 @@ const Contact = () => {
                 <CardContent>
                   <div className="space-y-3">
                     {officeHours.map((schedule, index) => (
-                      <div key={index} className="flex justify-between items-center">
+                      <div
+                        key={index}
+                        className="flex justify-between items-center"
+                      >
                         <span className="text-sm font-medium text-gray-700">
                           {schedule.day}
                         </span>
@@ -320,7 +336,7 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
-              
+
               {/* Location */}
               <Card>
                 <CardHeader>
@@ -336,7 +352,8 @@ const Contact = () => {
                         Automatic Laundry Services Co., Inc.
                       </p>
                       <p className="text-sm text-gray-600">
-                        45 Border Street<br />
+                        45 Border Street
+                        <br />
                         Newton, MA 02493
                       </p>
                     </div>
@@ -347,7 +364,7 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
-              
+
               {/* Social Media */}
               <Card>
                 <CardHeader>
@@ -391,33 +408,46 @@ const Contact = () => {
           <p className="text-xl text-gray-300 mb-8">
             For urgent matters or emergency service needs, call us directly
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-laundry-blue hover:bg-laundry-blue-dark">
+            <Button
+              size="lg"
+              className="bg-laundry-blue hover:bg-laundry-blue-dark"
+            >
               <Phone className="w-5 h-5 mr-2" />
               Call (617) 555-1234
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-laundry-navy">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-laundry-navy"
+            >
               <Mail className="w-5 h-5 mr-2" />
               Emergency Email
             </Button>
           </div>
-          
+
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <Star className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
               <h3 className="font-semibold mb-1">24-Hour Response</h3>
-              <p className="text-sm text-gray-300">We respond to all inquiries within one business day</p>
+              <p className="text-sm text-gray-300">
+                We respond to all inquiries within one business day
+              </p>
             </div>
             <div>
               <Users className="w-8 h-8 mx-auto mb-2 text-blue-400" />
               <h3 className="font-semibold mb-1">Local Team</h3>
-              <p className="text-sm text-gray-300">Newton-based team serving the entire Northeast</p>
+              <p className="text-sm text-gray-300">
+                Newton-based team serving the entire Northeast
+              </p>
             </div>
             <div>
               <Building className="w-8 h-8 mx-auto mb-2 text-green-400" />
               <h3 className="font-semibold mb-1">60+ Years</h3>
-              <p className="text-sm text-gray-300">Family-owned business with deep industry expertise</p>
+              <p className="text-sm text-gray-300">
+                Family-owned business with deep industry expertise
+              </p>
             </div>
           </div>
         </div>

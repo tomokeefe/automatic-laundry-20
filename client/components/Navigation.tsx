@@ -97,7 +97,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-4 space-y-3 border-t border-gray-200 mt-4">
-                <Button variant="outline" className="w-full h-12 text-base" asChild>
+                <Button
+                  variant="outline"
+                  className="w-full h-12 text-base"
+                  asChild
+                >
                   <Link to="/residents" onClick={() => setIsOpen(false)}>
                     Get the App
                   </Link>
