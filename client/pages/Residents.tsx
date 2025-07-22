@@ -460,7 +460,7 @@ const Residents = () => {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); console.log('Card reloaded:', cardReloadData); }}>
+                  <form className="space-y-6" onSubmit={handleCardReloadSubmit}>
                     <div>
                       <Label htmlFor="cardNumber">Card Number *</Label>
                       <Input
