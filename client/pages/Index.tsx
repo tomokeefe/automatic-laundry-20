@@ -148,9 +148,9 @@ const Index = () => {
             </div>
 
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto" role="img" aria-label="Automatic Laundry mobile app interface preview">
                 <div className="flex items-center space-x-3 mb-6">
-                  <div className="w-12 h-12 bg-laundry-blue rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-laundry-blue rounded-full flex items-center justify-center" aria-hidden="true">
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
                   <div>
