@@ -39,6 +39,22 @@ const Residents = () => {
     yourEmail: ''
   });
 
+  const [cardOrderData, setCardOrderData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    address: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    initialAmount: '20'
+  });
+
+  const [cardReloadData, setCardReloadData] = useState({
+    cardNumber: '',
+    reloadAmount: '10'
+  });
+
   const benefits = [
     {
       icon: <Smartphone className="w-8 h-8 text-laundry-orange" />,
