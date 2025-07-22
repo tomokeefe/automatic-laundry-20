@@ -317,7 +317,7 @@ const Residents = () => {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); console.log('Card ordered:', cardOrderData); }}>
+                  <form className="space-y-4" onSubmit={handleCardOrderSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="fullName">Full Name *</Label>
