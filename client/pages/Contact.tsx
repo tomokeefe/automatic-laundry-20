@@ -57,7 +57,7 @@ const Contact = () => {
     // Temporary alert - replace with actual form service integration
     alert(
       "Thank you for your message! We'll respond within 24 hours during business days.\n\n" +
-      "Note: For production, integrate with a form service like Formspree, EmailJS, or Vercel Forms."
+        "Note: For production, integrate with a form service like Formspree, EmailJS, or Vercel Forms.",
     );
 
     // Reset form
