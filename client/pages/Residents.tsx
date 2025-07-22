@@ -97,6 +97,20 @@ const Residents = () => {
     // Handle form submission
   };
 
+  const handleCardOrderSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Card order submitted:', cardOrderData);
+    // Here you would integrate with payment processor and card ordering system
+    alert('Card order submitted! You will receive a confirmation email shortly.');
+  };
+
+  const handleCardReloadSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Card reload submitted:', cardReloadData);
+    // Here you would process the card reload
+    alert(`$${cardReloadData.reloadAmount} has been added to your card! Funds are available immediately.`);
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setReferralData({
       ...referralData,
