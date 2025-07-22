@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Smartphone,
   Leaf,
@@ -27,94 +27,103 @@ import {
   Plus,
   Wallet,
   Shield,
-  RefreshCw
-} from 'lucide-react';
+  RefreshCw,
+} from "lucide-react";
 
 const Residents = () => {
   const [referralData, setReferralData] = useState({
-    managerName: '',
-    managerEmail: '',
-    propertyName: '',
-    yourName: '',
-    yourEmail: ''
+    managerName: "",
+    managerEmail: "",
+    propertyName: "",
+    yourName: "",
+    yourEmail: "",
   });
 
   const [cardOrderData, setCardOrderData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    address: '',
-    city: '',
-    state: '',
-    zipCode: '',
-    initialAmount: '20'
+    fullName: "",
+    email: "",
+    phone: "",
+    address: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    initialAmount: "20",
   });
 
   const [cardReloadData, setCardReloadData] = useState({
-    cardNumber: '',
-    reloadAmount: '10'
+    cardNumber: "",
+    reloadAmount: "10",
   });
 
   const benefits = [
     {
       icon: <Smartphone className="w-8 h-8 text-laundry-orange" />,
       title: "App Magic",
-      description: "Start cycles from your phone, get alerts when done – no more babysitting buzzers. Pro tip: Pair it with Netflix; your load's ready just as the plot thickens."
+      description:
+        "Start cycles from your phone, get alerts when done – no more babysitting buzzers. Pro tip: Pair it with Netflix; your load's ready just as the plot thickens.",
     },
     {
       icon: <Leaf className="w-8 h-8 text-laundry-orange" />,
-      title: "Eco-Smart Gear", 
-      description: "Energy-efficient machines that save water and the planet – because who wants a guilty conscience with their clean conscience?"
+      title: "Eco-Smart Gear",
+      description:
+        "Energy-efficient machines that save water and the planet – because who wants a guilty conscience with their clean conscience?",
     },
     {
       icon: <Zap className="w-8 h-8 text-laundry-orange" />,
       title: "Reliability Rocks",
-      description: "Family-owned means we fix things fast – no ghosting like that flaky dryer. Share your \"laundry fail\" on our app for a laugh and a chance at free cycles!"
+      description:
+        'Family-owned means we fix things fast – no ghosting like that flaky dryer. Share your "laundry fail" on our app for a laugh and a chance at free cycles!',
     },
     {
       icon: <Quote className="w-8 h-8 text-laundry-orange" />,
       title: "Resident Rave",
-      description: "\"Finally, laundry that doesn't eat my time or my missing socks. The app is a game-changer – thanks, Automatic Laundry User!\" – Tenant in NYC."
-    }
+      description:
+        '"Finally, laundry that doesn\'t eat my time or my missing socks. The app is a game-changer – thanks, Automatic Laundry User!" – Tenant in NYC.',
+    },
   ];
 
   const funHacks = [
     {
       title: "5 Ways to Fold Like a Pro (Without Folding Under Pressure)",
       icon: <Star className="w-5 h-5 text-laundry-orange" />,
-      readTime: "3 min read"
+      readTime: "3 min read",
     },
     {
-      title: "Laundry Confessions: That Time My Dryer Stole a Whole Outfit – And How We Got It Back",
+      title:
+        "Laundry Confessions: That Time My Dryer Stole a Whole Outfit – And How We Got It Back",
       icon: <MessageCircle className="w-5 h-5 text-laundry-orange" />,
-      readTime: "5 min read"
-    }
+      readTime: "5 min read",
+    },
   ];
 
   const handleReferralSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Referral submitted:', referralData);
+    console.log("Referral submitted:", referralData);
     // Handle form submission
   };
 
   const handleCardOrderSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Card order submitted:', cardOrderData);
+    console.log("Card order submitted:", cardOrderData);
     // Here you would integrate with payment processor and card ordering system
-    alert('Card order submitted! You will receive a confirmation email shortly.');
+    alert(
+      "Card order submitted! You will receive a confirmation email shortly.",
+    );
   };
 
   const handleCardReloadSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Card reload submitted:', cardReloadData);
+    console.log("Card reload submitted:", cardReloadData);
     // Here you would process the card reload
-    alert(`$${cardReloadData.reloadAmount} has been added to your card! Funds are available immediately.`);
+    alert(
+      `$${cardReloadData.reloadAmount} has been added to your card! Funds are available immediately.`,
+    );
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setReferralData({
       ...referralData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -127,21 +136,29 @@ const Residents = () => {
             For Residents
           </Badge>
           <h1 className="text-4xl lg:text-5xl font-bold text-laundry-navy mb-6">
-            Laundry That Gets You – 
+            Laundry That Gets You –
             <span className="block text-laundry-orange">And Gets It Done</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Hey, fellow laundry warriors – we know the drill: the eternal wait for an open machine, 
-            the sock mysteries, the quarter hunts that rival treasure maps. At Automatic Laundry, 
-            we're all about keeping it real and making it easy.
+            Hey, fellow laundry warriors – we know the drill: the eternal wait
+            for an open machine, the sock mysteries, the quarter hunts that
+            rival treasure maps. At Automatic Laundry, we're all about keeping
+            it real and making it easy.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-laundry-orange hover:bg-laundry-orange text-white">
+            <Button
+              size="lg"
+              className="bg-laundry-orange hover:bg-laundry-orange text-white"
+            >
               <Download className="w-5 h-5 mr-2" />
               Download the App
             </Button>
-            <Button size="lg" variant="outline" className="border-laundry-blue text-laundry-blue hover:bg-laundry-blue hover:text-white">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-laundry-blue text-laundry-blue hover:bg-laundry-blue hover:text-white"
+            >
               <Gift className="w-5 h-5 mr-2" />
               Refer Your Manager
             </Button>
@@ -157,8 +174,8 @@ const Residents = () => {
               Two Ways to Pay - Choose What Works for You
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Whether you prefer our mobile app or a physical card, we've got you covered.
-              Both work at any Automatic Laundry location!
+              Whether you prefer our mobile app or a physical card, we've got
+              you covered. Both work at any Automatic Laundry location!
             </p>
           </div>
 
@@ -213,7 +230,8 @@ const Residents = () => {
                       3. Tap & Go!
                     </h3>
                     <p className="text-gray-600">
-                      Start cycles, get alerts, and never hunt for quarters again
+                      Start cycles, get alerts, and never hunt for quarters
+                      again
                     </p>
                   </CardContent>
                 </Card>
@@ -259,7 +277,8 @@ const Residents = () => {
                       3. Use Anywhere
                     </h3>
                     <p className="text-gray-600">
-                      Works at any Automatic Laundry location across the Northeast
+                      Works at any Automatic Laundry location across the
+                      Northeast
                     </p>
                   </CardContent>
                 </Card>
@@ -289,17 +308,24 @@ const Residents = () => {
               Laundry Card Management
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Order a new card or add money to your existing card. Use it at any Automatic Laundry location!
+              Order a new card or add money to your existing card. Use it at any
+              Automatic Laundry location!
             </p>
           </div>
 
           <Tabs defaultValue="order" className="max-w-4xl mx-auto">
             <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger value="order" className="flex items-center space-x-2">
+              <TabsTrigger
+                value="order"
+                className="flex items-center space-x-2"
+              >
                 <Plus className="w-4 h-4" />
                 <span>Order New Card</span>
               </TabsTrigger>
-              <TabsTrigger value="reload" className="flex items-center space-x-2">
+              <TabsTrigger
+                value="reload"
+                className="flex items-center space-x-2"
+              >
                 <RefreshCw className="w-4 h-4" />
                 <span>Add Money to Card</span>
               </TabsTrigger>
@@ -313,7 +339,8 @@ const Residents = () => {
                     <span>Order Your Laundry Card</span>
                   </CardTitle>
                   <p className="text-gray-600">
-                    Get a physical card delivered to your address. Free shipping on orders over $20!
+                    Get a physical card delivered to your address. Free shipping
+                    on orders over $20!
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -325,7 +352,12 @@ const Residents = () => {
                           id="fullName"
                           name="fullName"
                           value={cardOrderData.fullName}
-                          onChange={(e) => setCardOrderData({...cardOrderData, fullName: e.target.value})}
+                          onChange={(e) =>
+                            setCardOrderData({
+                              ...cardOrderData,
+                              fullName: e.target.value,
+                            })
+                          }
                           required
                           className="mt-1"
                         />
@@ -337,7 +369,12 @@ const Residents = () => {
                           name="email"
                           type="email"
                           value={cardOrderData.email}
-                          onChange={(e) => setCardOrderData({...cardOrderData, email: e.target.value})}
+                          onChange={(e) =>
+                            setCardOrderData({
+                              ...cardOrderData,
+                              email: e.target.value,
+                            })
+                          }
                           required
                           className="mt-1"
                         />
@@ -352,16 +389,28 @@ const Residents = () => {
                           name="phone"
                           type="tel"
                           value={cardOrderData.phone}
-                          onChange={(e) => setCardOrderData({...cardOrderData, phone: e.target.value})}
+                          onChange={(e) =>
+                            setCardOrderData({
+                              ...cardOrderData,
+                              phone: e.target.value,
+                            })
+                          }
                           className="mt-1"
                         />
                       </div>
                       <div>
-                        <Label htmlFor="initialAmount">Initial Card Balance *</Label>
+                        <Label htmlFor="initialAmount">
+                          Initial Card Balance *
+                        </Label>
                         <select
                           className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-laundry-blue"
                           value={cardOrderData.initialAmount}
-                          onChange={(e) => setCardOrderData({...cardOrderData, initialAmount: e.target.value})}
+                          onChange={(e) =>
+                            setCardOrderData({
+                              ...cardOrderData,
+                              initialAmount: e.target.value,
+                            })
+                          }
                         >
                           <option value="10">$10.00</option>
                           <option value="20">$20.00 (Free Shipping!)</option>
@@ -377,7 +426,12 @@ const Residents = () => {
                         id="address"
                         name="address"
                         value={cardOrderData.address}
-                        onChange={(e) => setCardOrderData({...cardOrderData, address: e.target.value})}
+                        onChange={(e) =>
+                          setCardOrderData({
+                            ...cardOrderData,
+                            address: e.target.value,
+                          })
+                        }
                         required
                         className="mt-1"
                       />
@@ -390,7 +444,12 @@ const Residents = () => {
                           id="city"
                           name="city"
                           value={cardOrderData.city}
-                          onChange={(e) => setCardOrderData({...cardOrderData, city: e.target.value})}
+                          onChange={(e) =>
+                            setCardOrderData({
+                              ...cardOrderData,
+                              city: e.target.value,
+                            })
+                          }
                           required
                           className="mt-1"
                         />
@@ -401,7 +460,12 @@ const Residents = () => {
                           id="state"
                           name="state"
                           value={cardOrderData.state}
-                          onChange={(e) => setCardOrderData({...cardOrderData, state: e.target.value})}
+                          onChange={(e) =>
+                            setCardOrderData({
+                              ...cardOrderData,
+                              state: e.target.value,
+                            })
+                          }
                           required
                           className="mt-1"
                           placeholder="MA"
@@ -413,7 +477,12 @@ const Residents = () => {
                           id="zipCode"
                           name="zipCode"
                           value={cardOrderData.zipCode}
-                          onChange={(e) => setCardOrderData({...cardOrderData, zipCode: e.target.value})}
+                          onChange={(e) =>
+                            setCardOrderData({
+                              ...cardOrderData,
+                              zipCode: e.target.value,
+                            })
+                          }
                           required
                           className="mt-1"
                         />
@@ -421,25 +490,48 @@ const Residents = () => {
                     </div>
 
                     <div className="bg-blue-50 rounded-lg p-4">
-                      <h4 className="font-semibold text-laundry-navy mb-2">Order Summary</h4>
+                      <h4 className="font-semibold text-laundry-navy mb-2">
+                        Order Summary
+                      </h4>
                       <div className="flex justify-between items-center text-sm">
-                        <span>Card + Initial Balance (${cardOrderData.initialAmount})</span>
+                        <span>
+                          Card + Initial Balance (${cardOrderData.initialAmount}
+                          )
+                        </span>
                         <span>${cardOrderData.initialAmount}</span>
                       </div>
                       <div className="flex justify-between items-center text-sm">
                         <span>Shipping</span>
-                        <span className={parseInt(cardOrderData.initialAmount) >= 20 ? "text-green-600" : ""}>
-                          {parseInt(cardOrderData.initialAmount) >= 20 ? "FREE" : "$3.99"}
+                        <span
+                          className={
+                            parseInt(cardOrderData.initialAmount) >= 20
+                              ? "text-green-600"
+                              : ""
+                          }
+                        >
+                          {parseInt(cardOrderData.initialAmount) >= 20
+                            ? "FREE"
+                            : "$3.99"}
                         </span>
                       </div>
                       <hr className="my-2" />
                       <div className="flex justify-between items-center font-semibold">
                         <span>Total</span>
-                        <span>${parseInt(cardOrderData.initialAmount) >= 20 ? cardOrderData.initialAmount : (parseFloat(cardOrderData.initialAmount) + 3.99).toFixed(2)}</span>
+                        <span>
+                          $
+                          {parseInt(cardOrderData.initialAmount) >= 20
+                            ? cardOrderData.initialAmount
+                            : (
+                                parseFloat(cardOrderData.initialAmount) + 3.99
+                              ).toFixed(2)}
+                        </span>
                       </div>
                     </div>
 
-                    <Button type="submit" className="w-full bg-laundry-blue hover:bg-laundry-blue-dark">
+                    <Button
+                      type="submit"
+                      className="w-full bg-laundry-blue hover:bg-laundry-blue-dark"
+                    >
                       <CreditCard className="w-5 h-5 mr-2" />
                       Order Card & Pay
                     </Button>
@@ -456,7 +548,8 @@ const Residents = () => {
                     <span>Add Money to Your Card</span>
                   </CardTitle>
                   <p className="text-gray-600">
-                    Reload your existing laundry card online. Funds are available immediately!
+                    Reload your existing laundry card online. Funds are
+                    available immediately!
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -467,7 +560,12 @@ const Residents = () => {
                         id="cardNumber"
                         name="cardNumber"
                         value={cardReloadData.cardNumber}
-                        onChange={(e) => setCardReloadData({...cardReloadData, cardNumber: e.target.value})}
+                        onChange={(e) =>
+                          setCardReloadData({
+                            ...cardReloadData,
+                            cardNumber: e.target.value,
+                          })
+                        }
                         placeholder="Enter your 16-digit card number"
                         required
                         className="mt-1"
@@ -480,13 +578,22 @@ const Residents = () => {
                     <div>
                       <Label htmlFor="reloadAmount">Amount to Add *</Label>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-2">
-                        {['5', '10', '20', '50'].map((amount) => (
+                        {["5", "10", "20", "50"].map((amount) => (
                           <Button
                             key={amount}
                             type="button"
-                            variant={cardReloadData.reloadAmount === amount ? "default" : "outline"}
+                            variant={
+                              cardReloadData.reloadAmount === amount
+                                ? "default"
+                                : "outline"
+                            }
                             className="h-12"
-                            onClick={() => setCardReloadData({...cardReloadData, reloadAmount: amount})}
+                            onClick={() =>
+                              setCardReloadData({
+                                ...cardReloadData,
+                                reloadAmount: amount,
+                              })
+                            }
                           >
                             ${amount}
                           </Button>
@@ -499,7 +606,12 @@ const Residents = () => {
                           max="100"
                           step="5"
                           value={cardReloadData.reloadAmount}
-                          onChange={(e) => setCardReloadData({...cardReloadData, reloadAmount: e.target.value})}
+                          onChange={(e) =>
+                            setCardReloadData({
+                              ...cardReloadData,
+                              reloadAmount: e.target.value,
+                            })
+                          }
                           placeholder="Custom amount"
                           className="w-full"
                         />
@@ -507,7 +619,9 @@ const Residents = () => {
                     </div>
 
                     <div className="bg-orange-50 rounded-lg p-4">
-                      <h4 className="font-semibold text-laundry-navy mb-2">Reload Summary</h4>
+                      <h4 className="font-semibold text-laundry-navy mb-2">
+                        Reload Summary
+                      </h4>
                       <div className="flex justify-between items-center text-sm">
                         <span>Amount to Add</span>
                         <span>${cardReloadData.reloadAmount}</span>
@@ -523,7 +637,10 @@ const Residents = () => {
                       </div>
                     </div>
 
-                    <Button type="submit" className="w-full bg-laundry-orange hover:bg-laundry-orange text-white">
+                    <Button
+                      type="submit"
+                      className="w-full bg-laundry-orange hover:bg-laundry-orange text-white"
+                    >
                       <RefreshCw className="w-5 h-5 mr-2" />
                       Add ${cardReloadData.reloadAmount} to Card
                     </Button>
@@ -555,8 +672,9 @@ const Residents = () => {
               One Card, Every Location
             </h2>
             <p className="text-blue-100 max-w-2xl mx-auto">
-              Your Automatic Laundry card works at any of our 500+ locations across the Northeast.
-              Perfect for students, travelers, or anyone who moves around!
+              Your Automatic Laundry card works at any of our 500+ locations
+              across the Northeast. Perfect for students, travelers, or anyone
+              who moves around!
             </p>
           </div>
 
@@ -567,7 +685,8 @@ const Residents = () => {
               </div>
               <h3 className="font-semibold mb-2">500+ Locations</h3>
               <p className="text-blue-100 text-sm">
-                Massachusetts, New Hampshire, Vermont, Maine, Rhode Island, Connecticut, New York
+                Massachusetts, New Hampshire, Vermont, Maine, Rhode Island,
+                Connecticut, New York
               </p>
             </div>
 
@@ -577,7 +696,8 @@ const Residents = () => {
               </div>
               <h3 className="font-semibold mb-2">Never Expires</h3>
               <p className="text-blue-100 text-sm">
-                Your card balance never expires, so you can use it whenever you need
+                Your card balance never expires, so you can use it whenever you
+                need
               </p>
             </div>
 
@@ -587,7 +707,8 @@ const Residents = () => {
               </div>
               <h3 className="font-semibold mb-2">Instant Reloads</h3>
               <p className="text-blue-100 text-sm">
-                Add money online or at any location - funds available immediately
+                Add money online or at any location - funds available
+                immediately
               </p>
             </div>
 
@@ -611,26 +732,23 @@ const Residents = () => {
             <h2 className="text-3xl font-bold text-laundry-navy mb-4">
               Why You'll Dig It
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Authentic and Fun
-            </p>
+            <p className="text-gray-600 max-w-2xl mx-auto">Authentic and Fun</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+              <Card
+                key={index}
+                className="p-6 hover:shadow-lg transition-shadow"
+              >
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      {benefit.icon}
-                    </div>
+                    <div className="flex-shrink-0">{benefit.icon}</div>
                     <div>
                       <h3 className="text-xl font-semibold text-laundry-navy mb-2">
                         {benefit.title}
                       </h3>
-                      <p className="text-gray-600">
-                        {benefit.description}
-                      </p>
+                      <p className="text-gray-600">{benefit.description}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -643,24 +761,29 @@ const Residents = () => {
       {/* App Download Section */}
       <section className="py-16 bg-laundry-orange text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Don't Have the App Yet?
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Don't Have the App Yet?</h2>
           <p className="text-xl text-orange-100 mb-8">
-            Available on iOS and Android. Life's too short for bad laundry – let's make it fresh and funny.
+            Available on iOS and Android. Life's too short for bad laundry –
+            let's make it fresh and funny.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-laundry-orange hover:bg-gray-100">
+            <Button
+              size="lg"
+              className="bg-white text-laundry-orange hover:bg-gray-100"
+            >
               <Apple className="w-6 h-6 mr-2" />
               Download for iPhone
             </Button>
-            <Button size="lg" className="bg-white text-laundry-orange hover:bg-gray-100">
+            <Button
+              size="lg"
+              className="bg-white text-laundry-orange hover:bg-gray-100"
+            >
               <Play className="w-6 h-6 mr-2" />
               Get it on Android
             </Button>
           </div>
-          
+
           <div className="bg-orange-600 rounded-xl p-6 max-w-2xl mx-auto">
             <div className="flex items-center justify-center space-x-2 mb-3">
               <Sparkles className="w-5 h-5" />
@@ -692,11 +815,11 @@ const Residents = () => {
               Building Not Set Up Yet?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Refer your property manager and score bonus credits when they sign on. 
-              Help bring modern laundry to your building!
+              Refer your property manager and score bonus credits when they sign
+              on. Help bring modern laundry to your building!
             </p>
           </div>
-          
+
           <Card className="max-w-2xl mx-auto">
             <CardHeader>
               <CardTitle className="text-center text-laundry-navy">
@@ -729,7 +852,7 @@ const Residents = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <Label htmlFor="propertyName">Property/Building Name</Label>
                   <Input
@@ -740,7 +863,7 @@ const Residents = () => {
                     className="mt-1"
                   />
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="yourName">Your Name</Label>
@@ -764,16 +887,20 @@ const Residents = () => {
                     />
                   </div>
                 </div>
-                
-                <Button type="submit" className="w-full bg-laundry-orange hover:bg-laundry-orange text-white">
+
+                <Button
+                  type="submit"
+                  className="w-full bg-laundry-orange hover:bg-laundry-orange text-white"
+                >
                   <Gift className="w-5 h-5 mr-2" />
                   Send Referral & Earn Credits
                 </Button>
               </form>
-              
+
               <div className="mt-4 p-4 bg-orange-50 rounded-lg text-center">
                 <p className="text-sm text-gray-600">
-                  <strong>Bonus:</strong> Earn free wash credits when your manager signs up!
+                  <strong>Bonus:</strong> Earn free wash credits when your
+                  manager signs up!
                 </p>
               </div>
             </CardContent>
@@ -792,15 +919,16 @@ const Residents = () => {
               Blog-style content to make laundry less of a chore
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {funHacks.map((hack, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer">
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-shadow cursor-pointer"
+              >
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      {hack.icon}
-                    </div>
+                    <div className="flex-shrink-0">{hack.icon}</div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-laundry-navy mb-2 hover:text-laundry-orange transition-colors">
                         {hack.title}
@@ -815,7 +943,7 @@ const Residents = () => {
               </Card>
             ))}
           </div>
-          
+
           <div className="text-center mt-8">
             <Button variant="outline" size="lg">
               More Laundry Hacks
@@ -831,15 +959,23 @@ const Residents = () => {
             Ready to Transform Your Laundry Day?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of residents who've made the switch to coinless, hassle-free laundry
+            Join thousands of residents who've made the switch to coinless,
+            hassle-free laundry
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-laundry-orange hover:bg-laundry-orange text-white">
+            <Button
+              size="lg"
+              className="bg-laundry-orange hover:bg-laundry-orange text-white"
+            >
               <Download className="w-5 h-5 mr-2" />
               Download App Now
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-laundry-navy">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-laundry-navy"
+            >
               <Users className="w-5 h-5 mr-2" />
               Share with Friends
             </Button>

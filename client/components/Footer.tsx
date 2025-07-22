@@ -1,5 +1,12 @@
-import { Link } from 'react-router-dom';
-import { Sparkles, Phone, Mail, MapPin, Twitter, Instagram } from 'lucide-react';
+import { Link } from "react-router-dom";
+import {
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -15,8 +22,8 @@ const Footer = () => {
               <span className="font-bold text-xl">Automatic Laundry</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Family-owned since 1964, delivering ethical, tech-driven laundry solutions 
-              for property owners and residents across the Northeast.
+              Family-owned since 1964, delivering ethical, tech-driven laundry
+              solutions for property owners and residents across the Northeast.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
@@ -31,7 +38,9 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-laundry-blue" />
-                <span className="text-sm text-gray-300">info@automaticlaundry.com</span>
+                <span className="text-sm text-gray-300">
+                  info@automaticlaundry.com
+                </span>
               </div>
             </div>
           </div>
@@ -41,32 +50,50 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/about"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/owners" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/owners"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   For Property Owners
                 </Link>
               </li>
               <li>
-                <Link to="/residents" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/residents"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   For Residents
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/contact"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/blog"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Blog
                 </Link>
               </li>
@@ -92,7 +119,7 @@ const Footer = () => {
           <div className="text-gray-300 text-sm mb-4 md:mb-0">
             © 2024 Automatic Laundry Services Co., Inc. All rights reserved.
           </div>
-          
+
           {/* Social Links */}
           <div className="flex items-center space-x-4">
             <span className="text-gray-300 text-sm">Follow us:</span>

@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Contact = () => {
   return (
@@ -13,7 +13,9 @@ const Contact = () => {
             Let's Chat – We're All Ears (And Washers).
           </p>
           <p className="text-gray-500 mb-8">
-            This page is under construction. Please continue the conversation to help build out the complete Contact page with inquiry form, company details, and Google Maps integration.
+            This page is under construction. Please continue the conversation to
+            help build out the complete Contact page with inquiry form, company
+            details, and Google Maps integration.
           </p>
           <Button className="bg-laundry-blue hover:bg-laundry-blue-dark">
             Coming Soon

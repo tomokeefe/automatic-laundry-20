@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Sparkles } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'For Property Owners', href: '/owners' },
-    { name: 'For Residents', href: '/residents' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "For Property Owners", href: "/owners" },
+    { name: "For Residents", href: "/residents" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const isActive = (href: string) => {
@@ -44,8 +44,8 @@ const Navigation = () => {
                 to={item.href}
                 className={`text-sm font-medium transition-colors hover:text-laundry-blue ${
                   isActive(item.href)
-                    ? 'text-laundry-blue border-b-2 border-laundry-blue pb-1'
-                    : 'text-gray-600'
+                    ? "text-laundry-blue border-b-2 border-laundry-blue pb-1"
+                    : "text-gray-600"
                 }`}
               >
                 {item.name}
@@ -69,7 +69,11 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-600 hover:text-laundry-blue focus:outline-none focus:text-laundry-blue"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -84,8 +88,8 @@ const Navigation = () => {
                   to={item.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'text-laundry-blue bg-laundry-blue-light'
-                      : 'text-gray-600 hover:text-laundry-blue hover:bg-gray-50'
+                      ? "text-laundry-blue bg-laundry-blue-light"
+                      : "text-gray-600 hover:text-laundry-blue hover:bg-gray-50"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
