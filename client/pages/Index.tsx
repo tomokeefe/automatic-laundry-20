@@ -240,18 +240,14 @@ const Index = () => {
           </p>
 
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="aspect-video bg-gradient-to-br from-laundry-blue-light to-laundry-orange-light rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <div className="w-0 h-0 border-l-[12px] border-l-laundry-blue border-y-[8px] border-y-transparent ml-1"></div>
-                </div>
-                <h3 className="text-xl font-semibold text-laundry-navy mb-2">
-                  Demo Video Coming Soon
-                </h3>
-                <p className="text-gray-600">
-                  Watch real users experience our game-changing technology
-                </p>
-              </div>
+            <div className="aspect-video rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/GFMCAJEBvBw"
+                title="Automatic Laundry Demo Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
             </div>
           </div>
         </div>
